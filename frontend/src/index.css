@@ -45,49 +45,59 @@
 
 /* PROFILE SECTION */
 
-#profile {
+.home {
+  opacity: 0;
+  transform: translateY(-200px); 
+  transition: opacity 2s ease, transform 2s ease; 
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile {
   display: flex;
   justify-content: center;
   gap: 5rem;
   height: 80vh;
 }
 
-
-.section__pic-container {
+.profile__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
 }
 
-.section__pic-container img { 
+.profile__pic-container img { 
   border-radius: 50px;
 }
 
-.section__text {
+.profile__text {
   align-self: center;
   text-align: center;
 }
 
-.section__text p {
+.profile__text p {
   font-weight: 600;
 }
 
-.section__text__p1 {
+.profile__text__p1 {
   text-align: center;
 }
 
-.section__text__p2 {
+.profile__text__p2 {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.title {
+.profile__title {
   font-size: 2rem;
   text-align: center;
 }
 
-#socials-container {
+.profile__socials-container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;

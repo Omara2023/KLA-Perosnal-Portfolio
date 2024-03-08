@@ -1,20 +1,27 @@
-import myImage from './profile.jpg'; 
-import gitHubImage from "./github.png";
-import linkedInImage from "./linkedin.png";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import myImage from './profile.jpg';
+import linkedInImage from './linkedin.png';
+import gitHubImage from './github.png';
 
 const Home = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
-    <div className="home">
-      <section id="profile">
-        <div className="section__pic-container">
-          <img src={myImage} alt="This should have loaded.." />
+    <div className={`home ${isLoaded ? 'fade-in' : ''}`}>
+      <section className="profile">
+        <div className="profile__pic-container">
+          <img src={myImage} alt="Profile" />
         </div>
-        <div className="section__text">
-          <p className="section__text__p1">Hello, I'm</p>
-          <h1 className="title">Omar Al-Mizan</h1>
-          <p className="section__text__p2">Full Stack Developer</p>
-          <div className="btn-container">
+        <div className="profile__text">
+          <p className="profile__text__p1">Hello, I'm</p>
+          <h1 className="profile__title">Omar Al-Mizan</h1>
+          <p className="profile__text__p2">Full Stack Developer</p>
+          <div className="profile__btn-container">
             <button
               className="btn btn-color-2"
               onClick={() => window.open('./assets/resume-example.pdf')}
@@ -25,16 +32,16 @@ const Home = () => {
               Contact Info
             </button>
           </div>
-          <div id="socials-container">
+          <div className="profile__socials-container">
             <img
               src={linkedInImage}
-              alt="My LinkedIn profile"
+              alt="LinkedIn"
               className="icon"
               onClick={() => {window.location.href = 'https://linkedin.com/';}}
             />
             <img
               src={gitHubImage}
-              alt="My Github profile"
+              alt="GitHub"
               className="icon"
               onClick={() => {window.location.href = 'https://github.com/';}}
             />
@@ -43,7 +50,6 @@ const Home = () => {
       </section>
     </div>
   );
-  
-}
+};
 
 export default Home;
