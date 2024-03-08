@@ -10,7 +10,8 @@ def article_list(request):
     serializer = ArticleSerializer(articles, many=True, context={'request': request})
     return Response(serializer.data)
 
+@api_view(["GET"])
 def article_detail(request, slug):
-    #return HttpResponse(slug)
     article = Article.objects.get(slug=slug)
-    return 
+    serializer = ArticleSerializer(article, context={'request': request})
+    return Response(serializer.data)

@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    #path('get-welcome/', views.get_welcome, name="get_welcome"),
-    #path("blogs/", include("blogs.urls")),
-    #path("api/", include("api.urls")),
+    path('', views.article_list, name="list"),
+    path('<slug:slug>/', views.article_detail, name="detail"),
+    
 ]
