@@ -1,6 +1,8 @@
 const Projects = () => {
   return (  
-    <div>Projects Page</div>
+    <section className="contact">
+      <p className="section-text">WIP! :/</p>
+    </section>
   );
 }
  

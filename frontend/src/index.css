@@ -95,6 +95,7 @@
 .profile__title {
   font-size: 2rem;
   text-align: center;
+  margin: 10px;
 }
 
 .profile__socials-container {
@@ -130,6 +131,7 @@
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
+  margin: 10px;
 }
 
 .btn-color-1:hover,
@@ -292,4 +294,134 @@
 
 .not-found a:hover {
   background-color: #d82a5f;
+}
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+p.section-text, h1 {
+  font-size: 50px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-item p {
+  font-size: larger;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+.contact a {
+  transition: all 300ms ease;
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+
+}
+
+.contact a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/*Image slider slides*/
+
+.img-slider-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: translate 300ms ease-in-out;
+}
+
+.img-slider-button {
+  all: unset;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 100ms ease-in-out;
+}
+
+.img-slider-button:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.img-slider-button:hover > * {
+    animation: squish 200ms ease-in-out;
+  }
+
+.img-slider-button > * {
+  stroke: white;
+  fill: blacks;
+  width: 2rem;
+  height: 2rem;
+}
+
+.carousel .wrapper {
+  width: 100%;
+  height: 100%; 
+  display: flex;
+}
+
+@keyframes squish {
+  50% {
+    transform: scaleY(0.6) scaleX(1.4);
+  }
+}
+
+.img-slider-dot-button {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  transition: scale 100ms ease-in-out;
+}
+
+.img-slider-dot-button:hover,
+.img-slider-dot-button:focus-visible {
+  scale: 1.2;
+}
+
+.img-slider-dot-button > * {
+  stroke: white;
+  fill: black;
+  height: 100%;
+  width: 100%;
+}
+
+.img-slider-dot-button:focus-visible,
+.img-slider-button:focus-visible {
+  outline: auto;
 }
