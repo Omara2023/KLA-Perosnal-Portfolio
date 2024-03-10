@@ -2,7 +2,7 @@ import ImageSlider from "./ImageSlider";
 
 const Gallery= () => {
 
-  const images = ['static/car-1.jpg', 'static/car-2.jpg', 'static/car-3.jpg', 'static/car-4.jpg', 'static/car-5.jpg'];
+  const images = ['car-1.jpg', 'car-2.jpg', 'car-3.jpg', 'car-4.jpg', 'car-5.jpg'];
 
   return (  
     <div  style={{

@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../useFetch";
+import backendPath from "./backendPath";
 
 const BlogDetails = () => {
   const { slug } = useParams();
-  const backendPath = "http://127.0.0.1:8000/blogs/";
-  const {data: blog, error, isLoading} = useFetch(backendPath + slug)
+  const path = `${backendPath}blogs/`;
+  const {data: blog, error, isLoading} = useFetch(path + slug)
 
   return (  
     <div className="blog-details">

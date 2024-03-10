@@ -1,9 +1,10 @@
 import React from 'react';
 import './AboutMe.css'; 
+import backendPath from './backendPath';
 
 const AboutMe = () => {
 
-  const backendPath = "http://127.0.0.1:8000/static/profile.jpg";  
+  const imagePath = `${backendPath}static/profile.jpg`;  
 
   return (
     <div className="about-me-container">
@@ -13,7 +14,7 @@ const AboutMe = () => {
       </div>
       <div className="about-me-content">
         <div className="about-me-image">
-        <img src={backendPath} alt="Software Developer" />
+        <img src={imagePath} alt="Software Developer" />
         </div>
         <div className="about-me-details">
           <h2>Omar Al-Mizan</h2>

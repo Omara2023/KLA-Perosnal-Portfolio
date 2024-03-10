@@ -1,10 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import backendPath from './backendPath';
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const backendPath = "http://127.0.0.1:8000/static/";
+  const path = `${backendPath}static/`;
 
   useEffect(() => {
     setIsLoaded(true);
@@ -14,7 +15,7 @@ const Home = () => {
     <div className={`home ${isLoaded ? 'fade-in' : ''}`}>
       <section className="profile">
         <div className="profile__pic-container">
-          <img src={backendPath + "profile.jpg"} alt="Profile" />
+          <img src={path + "profile.jpg"} alt="Profile" />
         </div>
         <div className="profile__text">
           <p className="profile__text__p1">Hello, I'm</p>
@@ -33,13 +34,13 @@ const Home = () => {
           </div>
           <div className="profile__socials-container">
             <img
-              src={backendPath + "linkedin.png"}
+              src={path + "linkedin.png"}
               alt="LinkedIn"
               className="icon"
               onClick={() => {window.location.href = 'https://www.linkedin.com/in/omar-al-mizan-bb92a81aa/';}}
             />
             <img
-              src={backendPath + "github.png"}
+              src={path + "github.png"}
               alt="GitHub"
               className="icon"
               onClick={() => {window.location.href = 'https://github.com/Omara2023';}}

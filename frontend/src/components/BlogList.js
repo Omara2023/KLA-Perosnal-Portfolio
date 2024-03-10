@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import { format } from 'date-fns';
+import backendPath from "./backendPath";
 
 const BlogList = () => {
 
-  const backendPath = "http://127.0.0.1:8000/blogs/";
-  const {data: blogs} = useFetch(backendPath);  
+  const path = `${backendPath}blogs/`;
+  const {data: blogs} = useFetch(path);  
 
   // Check if blogs is null or undefined before mapping over it
   if (!blogs) {
